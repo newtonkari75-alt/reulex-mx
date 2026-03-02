@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 1. ADVANCED SEO & STRUCTURED METADATA (Vercel-Style Premium) -->
+    <title>Veluflex™ | Certified Joint Support Gel - Europe Official</title>
+    <meta name="title" content="Veluflex™ | Certified Joint Support Gel - Europe Official">
+    <meta name="description"
+        content="Experience advanced joint mobility with Veluflex™. High-concentration Hyaluronic Acid formula for deep tissue rehydration. Official distribution in EN, FR, BE, DE & SE. 90-day peace of mind guarantee.">
+    <meta name="keywords"
+        content="Veluflex, joint support gel, hyaluronic acid for joints, arthritis relief support, joint stiffness morning relief, joint mobility Europe, senior joint health, transdermal joint technology">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="language" content="English">
+    <link rel="canonical" href="https://veluflex.vercel.app/">
+
+    <!-- Social Media / Open Graph / Facebook -->
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://veluflex.vercel.app/">
+    <meta property="og:title" content="Veluflex™ | Advanced Joint Rehydration Technology">
+    <meta property="og:description"
+        content="Restore your natural mobility. High-concentration Hyaluronic Acid for targeted relief. European official distribution.">
+    <meta property="og:image" content="images/veluflex_product.webp">
+    <meta property="product:brand" content="Veluflex">
+    <meta property="product:availability" content="in stock">
+    <meta property="product:condition" content="new">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Veluflex™ | Professional Joint Support">
+    <meta name="twitter:description"
+        content="Certified mobility solution with 90-day satisfaction guarantee. Trusted across Europe.">
+    <meta name="twitter:image" content="images/veluflex_product.webp">
+
+    <!-- JSON-LD SEO Schema (Enhanced) -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Veluflex™ Joint Support Gel",
+        "image": "images/veluflex_product.webp",
+        "description": "Advanced joint rehydration gel with bioconcentrated hyaluronic acid.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Veluflex"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://veluflex.vercel.app/",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "1250"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does Veluflex™ support joint mobility?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Veluflex™ uses advanced transdermal technology that allows hyaluronic acid and Boswellia extracts to penetrate locally to rehydrate connective tissues and soothe inflammation, promoting better movement fluidity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the product available in pharmacies?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To ensure direct distribution and maintain a competitive price by eliminating intermediaries, Veluflex™ is exclusively available through our official logistics centers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the recommended duration for a Veluflex™ course?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "While many feel quick relief, we recommend continuous use for 30 to 90 days to allow deep and lasting rehydration of the joints."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use Veluflex™ with other treatments?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Veluflex™ is an external topical solution. However, we always advise consulting your healthcare professional if you are following a specific joint treatment to ensure full compatibility."
+            }
+          }
+        ]
+      }
+    ]
+    </script>
+
+    <!-- Tailwind & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Bodoni Moda', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            accent: '#4f8cf6',
+                            bg: '#f0f7ff',
+                            dark: '#0a0a0a',
+                            navy: '#0f172a'
+                        }
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 50px rgba(0,0,0,0.05)',
+                        'accent': '0 10px 30px rgba(79, 140, 246, 0.25)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+        }
+
+        .font-serif {
+            font-family: 'Bodoni Moda', serif;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-bottom: 2rem;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .modal {
+            display: none;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #4f8cf6;
+            border-radius: 10px;
+        }
+
+        /* Improved semantic image handling */
+        img {
+            content-visibility: auto;
+        }
+    </style>
+</head>
+
+<body class="bg-[#FBFBFB] flex flex-col min-h-screen">
+
+    <!-- 1. ALERT BAR -->
+    <div
+        class="bg-brand-dark text-white text-[10px] sm:text-[11px] font-black tracking-[0.2em] py-3 uppercase border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-14">
+            <div class="flex items-center gap-2">
+                <i data-lucide="shield-check" class="w-4 h-4 text-brand-accent"></i>
+                <span>90-Day "Total Peace of Mind" Guarantee</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-400">
+                <i data-lucide="truck" class="w-4 h-4 text-brand-accent"></i>
+                <span>FR | BE | DE | SE: Global Priority Shipping</span>
+            </div>
+            <div class="flex items-center gap-2 text-gray-400">
+                <i data-lucide="award" class="w-4 h-4 text-brand-accent"></i>
+                <span>Certified Pharmaceutical Quality Standards</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 py-5">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="/" class="flex items-center gap-2" aria-label="Veluflex Home">
+                <img src="images/veluflex_logo_new.webp" alt="Veluflex Luxury Logo" class="h-10 w-auto" loading="eager">
+                <span class="sr-only">Veluflex™ Joint Solutions</span>
+            </a>
+            <div class="hidden lg:flex gap-10 text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">
+                <a href="#reviews" class="hover:text-brand-accent transition">Verified Reviews</a>
+                <a href="#faq" class="hover:text-brand-accent transition">Support FAQ</a>
+            </div>
+            <a href="#countries"
+                class="bg-brand-dark text-white px-7 py-3 rounded-full font-black text-[10px] shadow-premium hover:bg-brand-accent transition-all uppercase tracking-widest active:scale-95">
+                ORDER NOW
+            </a>
+        </div>
+    </nav>
+
+    <!-- 3. HERO SECTION (Semantic Content) -->
+    <header class="relative pt-16 pb-32 overflow-hidden bg-brand-bg">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center gap-3 px-5 py-2 bg-white rounded-full border border-blue-100 shadow-sm mb-10">
+                        <span class="flex h-2 w-2 rounded-full bg-brand-accent animate-pulse"></span>
+                        <small class="text-[10px] font-extrabold uppercase tracking-widest text-brand-accent">Official
+                            EU Logistics Distributor Partner</small>
+                    </div>
+
+                    <h1
+                        class="font-serif font-black text-5xl md:text-7xl text-brand-dark leading-[1.1] tracking-tighter mb-8 italic">
+                        Deeply rehydrate your <span class="text-brand-accent not-italic font-black">worn joints</span>
+                        efficiently.
+                    </h1>
+
+                    <p class="text-lg text-gray-500 font-medium leading-relaxed max-w-xl mb-12">
+                        Veluflex™ advanced tissue rehydration technology is specifically designed to
+                        restore natural joint cushioning and soothe stiffness from the very first application.
+                    </p>
+
+                    <div
+                        class="space-y-4 mb-12 bg-white/50 backdrop-blur-sm p-6 rounded-3xl border border-white inline-block text-left">
+                        <div
+                            class="flex items-center gap-4 font-extrabold text-sm text-brand-dark uppercase tracking-tight">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent" aria-hidden="true"></i>
+                            Rapid morning stiffness relief support
+                        </div>
+                        <div
+                            class="flex items-center gap-4 font-extrabold text-sm text-brand-dark uppercase tracking-tight">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent" aria-hidden="true"></i>
+                            Bioconcentrated Pure Hyaluronic Acid
+                        </div>
+                    </div>
+
+                    <p
+                        class="mt-8 text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em] flex items-center justify-center lg:justify-start gap-2">
+                        <i data-lucide="shield" class="w-3 h-3 text-brand-accent"></i> 256-Bit SSL Secured Order
+                    </p>
+                </div>
+
+                <div class="relative flex justify-center items-center">
+                    <div class="absolute inset-0 bg-blue-400/10 blur-[120px] rounded-full"></div>
+                    <img src="images/veluflex_product.webp" alt="Veluflex Advanced Joint Support Product Bottle"
+                        class="relative z-10 w-full max-w-[500px] transform hover:scale-[1.03] transition-transform duration-700"
+                        width="500" height="500">
+
+                    <!-- Badges layer -->
+                    <div class="absolute -left-4 top-1/2 -translate-y-1/2 space-y-4 z-20 hidden md:block">
+                        <div
+                            class="bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white shadow-premium flex items-center gap-4">
+                            <div class="bg-blue-50 p-2 rounded-lg"><i data-lucide="microscope"
+                                    class="w-5 h-5 text-brand-accent"></i></div>
+                            <span
+                                class="text-[10px] font-black uppercase tracking-tighter text-brand-dark">Laboratory<br>Certified
+                                Formula</span>
+                        </div>
+                        <div
+                            class="bg-white/90 backdrop-blur-md p-4 rounded-2xl border border-white shadow-premium flex items-center gap-4 translate-x-4">
+                            <div class="bg-green-50 p-2 rounded-lg"><i data-lucide="leaf"
+                                    class="w-5 h-5 text-green-500"></i></div>
+                            <span class="text-[10px] font-black uppercase tracking-tighter text-brand-dark">Ethical
+                                Natural<br>Ingredients</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Regional Distribution -->
+        <section id="countries" class="py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-20">
+                    <span
+                        class="text-brand-accent font-black uppercase tracking-[0.2em] text-[10px] px-4 py-1.5 bg-blue-50 rounded-full border border-blue-100">Global
+                        Sales Access</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-brand-dark mt-8 leading-none tracking-tighter">Where
+                        should we <span class="text-brand-accent italic font-light">ship</span> your order?</h2>
+                    <p class="text-gray-500 mt-6 text-lg font-medium italic">Guaranteed rapid logistics to these
+                        authorized regions:</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+                    <!-- France -->
+                    <article class="h-full">
+                        <a href="https://www.clickrtrckr.com/2LXFFTP/7GDSK5X/?uid=11714"
+                            class="group block bg-gray-50 p-8 rounded-[2.5rem] border border-gray-100 h-full transition-all duration-500 hover:bg-white hover:shadow-premium hover:-translate-y-2 text-center"
+                            title="Order Veluflex in France">
+                            <div
+                                class="mb-8 rounded-2xl overflow-hidden shadow-lg transform group-hover:scale-110 transition-transform duration-700">
+                                <img src="https://flagcdn.com/w640/fr.png" alt="France" class="w-full h-36 object-cover"
+                                    loading="lazy">
+                            </div>
+                            <h3
+                                class="text-xl font-extrabold mb-2 text-brand-dark group-hover:text-brand-accent transition">
+                                France</h3>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-6 italic">24h
+                                Express Fulfillment</p>
+                            <div
+                                class="inline-flex items-center gap-2 px-5 py-2.5 bg-green-50 text-green-600 rounded-full text-[10px] font-black uppercase tracking-widest border border-green-100">
+                                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Service Active
+                            </div>
+                        </a>
+                    </article>
+                    <!-- Belgium -->
+                    <article class="h-full">
+                        <a href="https://www.clickrtrckr.com/2LXFFTP/7GDSK5X/?uid=11718"
+                            class="group block bg-gray-50 p-8 rounded-[2.5rem] border border-gray-100 h-full transition-all duration-500 hover:bg-white hover:shadow-premium hover:-translate-y-2 text-center"
+                            title="Order Veluflex in Belgium">
+                            <div
+                                class="mb-8 rounded-2xl overflow-hidden shadow-lg transform group-hover:scale-110 transition-transform duration-700">
+                                <img src="https://flagcdn.com/w640/be.png" alt="Belgium"
+                                    class="w-full h-36 object-cover" loading="lazy">
+                            </div>
+                            <h3
+                                class="text-xl font-extrabold mb-2 text-brand-dark group-hover:text-brand-accent transition">
+                                Belgium</h3>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-6 italic">Direct
+                                Regional Logistics</p>
+                            <div
+                                class="inline-flex items-center gap-2 px-5 py-2.5 bg-green-50 text-green-600 rounded-full text-[10px] font-black uppercase tracking-widest border border-green-100">
+                                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Service Active
+                            </div>
+                        </a>
+                    </article>
+                    <!-- Germany -->
+                    <article class="h-full">
+                        <a href="https://www.clickrtrckr.com/2LXFFTP/7GDSK5X/?uid=11712"
+                            class="group block bg-gray-50 p-8 rounded-[2.5rem] border border-gray-100 h-full transition-all duration-500 hover:bg-white hover:shadow-premium hover:-translate-y-2 text-center"
+                            title="Order Veluflex in Germany">
+                            <div
+                                class="mb-8 rounded-2xl overflow-hidden shadow-lg transform group-hover:scale-110 transition-transform duration-700">
+                                <img src="https://flagcdn.com/w640/de.png" alt="Germany"
+                                    class="w-full h-36 object-cover" loading="lazy">
+                            </div>
+                            <h3
+                                class="text-xl font-extrabold mb-2 text-brand-dark group-hover:text-brand-accent transition">
+                                Germany</h3>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-6 italic">Central
+                                EU Distribution Hub</p>
+                            <div
+                                class="inline-flex items-center gap-2 px-5 py-2.5 bg-green-50 text-green-600 rounded-full text-[10px] font-black uppercase tracking-widest border border-green-100">
+                                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Service Active
+                            </div>
+                        </a>
+                    </article>
+                    <!-- Sweden -->
+                    <article class="h-full">
+                        <a href="https://www.clickrtrckr.com/2LXFFTP/7GDSK5X/?uid=11715"
+                            class="group block bg-gray-50 p-8 rounded-[2.5rem] border border-gray-100 h-full transition-all duration-500 hover:bg-white hover:shadow-premium hover:-translate-y-2 text-center"
+                            title="Order Veluflex in Sweden">
+                            <div
+                                class="mb-8 rounded-2xl overflow-hidden shadow-lg transform group-hover:scale-110 transition-transform duration-700">
+                                <img src="https://flagcdn.com/w640/se.png" alt="Sweden" class="w-full h-36 object-cover"
+                                    loading="lazy">
+                            </div>
+                            <h3
+                                class="text-xl font-extrabold mb-2 text-brand-dark group-hover:text-brand-accent transition">
+                                Sweden</h3>
+                            <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-6 italic">Nordic
+                                Priority Fulfillment</p>
+                            <div
+                                class="inline-flex items-center gap-2 px-5 py-2.5 bg-green-50 text-green-600 rounded-full text-[10px] font-black uppercase tracking-widest border border-green-100">
+                                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Service Active
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Verified Reviews Section -->
+        <section id="reviews" class="py-32 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-6">
+                <header class="text-center mb-24">
+                    <h2 class="font-serif text-4xl md:text-5xl text-brand-dark tracking-tighter leading-none italic">
+                        Trusted by <span class="text-brand-accent font-light">thousands of seniors</span> across all of
+                        Europe
+                    </h2>
+                </header>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Claire Review -->
+                    <article
+                        class="bg-gray-50 p-10 rounded-[48px] border border-gray-100 flex flex-col h-full hover:shadow-2xl hover:bg-white transition-all duration-500 relative group">
+                        <div class="flex text-yellow-400 gap-1 mb-6">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <span class="ml-2 text-brand-dark font-black text-xs uppercase tracking-widest">5/5
+                                Verified</span>
+                        </div>
+                        <h4 class="font-black text-brand-navy text-xl mb-4 tracking-tighter">"An unexpected relief for
+                            my knees"</h4>
+                        <blockquote class="text-text-muted italic text-[15px] leading-relaxed mb-10 flex-grow">"My knees
+                            used
+                            to hurt at the market. After 10 days of Veluflex, the 'locking' sensation disappeared. It's
+                            the
+                            first gel that has had a real effect on my mobility."</blockquote>
+                        <footer class="flex items-center gap-5 pt-8 border-t border-gray-100">
+                            <img src="https://i.pravatar.cc/100?img=44" alt="Claire Martin"
+                                class="w-14 h-14 rounded-full ring-4 ring-white shadow-md" loading="lazy">
+                            <div>
+                                <cite
+                                    class="font-extrabold text-[14px] text-brand-navy tracking-tight leading-none not-italic">Claire
+                                    Martin (62 years)</cite>
+                                <p class="text-[10px] text-green-600 font-black uppercase tracking-widest mt-2">Verified
+                                    Purchase • Lyon</p>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <!-- Michel Review -->
+                    <article
+                        class="bg-brand-dark text-white p-10 rounded-[3rem] shadow-premium scale-105 relative z-10 text-center flex flex-col items-center">
+                        <div
+                            class="absolute -top-4 bg-brand-accent text-white px-5 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest">
+                            Customer Excellence Result</div>
+                        <div class="flex text-brand-accent gap-1 mb-6 mt-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <span class="ml-2 text-white font-black text-xs uppercase tracking-widest">5.0</span>
+                        </div>
+                        <h4 class="font-black text-white text-xl mb-4 tracking-tighter relative z-10">"German Quality
+                            truly confirmed"</h4>
+                        <blockquote
+                            class="text-gray-300 italic text-[15px] leading-relaxed mb-10 flex-grow relative z-10">
+                            "I live in Germany and have been using Veluflex for a month. The morning stiffness in my
+                            fingers has
+                            almost completely disappeared. A professional joint support."</blockquote>
+                        <footer class="flex items-center gap-5 pt-8 border-t border-white/10 relative z-10">
+                            <img src="https://i.pravatar.cc/100?img=15" alt="Michel Lefèvre"
+                                class="w-14 h-14 rounded-full ring-4 ring-brand-blue/30 shadow-md" loading="lazy">
+                            <div>
+                                <cite
+                                    class="font-extrabold text-[14px] text-white tracking-tight leading-none not-italic">Michel
+                                    Lefèvre (57 years)</cite>
+                                <p class="text-[10px] text-brand-cyan font-black uppercase tracking-widest mt-2">
+                                    Verified Purchase • Munich</p>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <!-- Jean Review -->
+                    <article
+                        class="bg-gray-50 p-10 rounded-[48px] border border-gray-100 flex flex-col h-full hover:shadow-2xl hover:bg-white transition-all duration-500 relative group">
+                        <div class="flex text-green-500 gap-1 mb-6 leading-none">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <span class="ml-2 text-brand-dark font-black text-xs uppercase tracking-widest">4.9/5</span>
+                        </div>
+                        <h4 class="font-black text-brand-navy text-xl mb-4 tracking-tighter">"Skeptical at first, but
+                            now fully convinced"
+                        </h4>
+                        <blockquote class="text-text-muted italic text-[15px] leading-relaxed mb-10 flex-grow">"I
+                            thought it
+                            was just another marketing promise. But the 90-day guarantee reassured me. In the end, I'm
+                            keeping my 3 bottles. The improved mobility is real."</blockquote>
+                        <footer class="flex items-center gap-5 pt-8 border-t border-gray-100">
+                            <img src="https://i.pravatar.cc/100?img=12" alt="Jean Dupont"
+                                class="w-14 h-14 rounded-full ring-4 ring-white shadow-md" loading="lazy">
+                            <div>
+                                <cite
+                                    class="font-extrabold text-[14px] text-brand-navy tracking-tight leading-none not-italic">Jean
+                                    Dupont (69 years)</cite>
+                                <p class="text-[10px] text-green-600 font-black uppercase tracking-widest mt-2">Verified
+                                    Purchase • Brussels</p>
+                            </div>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-32 bg-white">
+            <div class="max-w-3xl mx-auto px-6">
+                <header class="text-center mb-20">
+                    <h2
+                        class="font-serif text-4xl md:text-5xl text-brand-dark tracking-tighter leading-none italic uppercase">
+                        Fundamental Joint Health <span class="text-brand-accent font-light italic">Support FAQ</span>
+                    </h2>
+                </header>
+
+                <div class="space-y-5">
+                    <!-- SEO Optimized FAQ Items -->
+                    <div
+                        class="faq-item border border-gray-200 rounded-[2.5rem] bg-gray-50 overflow-hidden cursor-pointer shadow-sm hover:border-brand-accent transition-all duration-300">
+                        <div class="faq-question flex justify-between items-center p-8" onclick="toggleFaq(this)">
+                            <h4 class="font-black text-brand-dark text-lg uppercase tracking-tight">1. How exactly does
+                                Veluflex™ improve my joint mobility?</h4>
+                            <i data-lucide="chevron-down"
+                                class="faq-icon text-brand-accent w-5 h-5 transition-transform duration-300"></i>
+                        </div>
+                        <div class="faq-answer px-8 text-text-muted text-[15px] bg-gray-50/50">
+                            <p class="leading-relaxed py-4">Veluflex™ uses advanced transdermal delivery technology that
+                                allows pure hyaluronic acid and high-potency Boswellia extracts to penetrate locally.
+                                This targets connective tissues to effectively rehydrate the joint capsule and soothe
+                                underlying inflammation, promoting significantly better movement fluidity.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="faq-item border border-gray-200 rounded-[2.5rem] bg-gray-50 overflow-hidden cursor-pointer shadow-sm hover:border-brand-accent transition-all duration-300">
+                        <div class="faq-question flex justify-between items-center p-8" onclick="toggleFaq(this)">
+                            <h4 class="font-black text-brand-dark text-lg uppercase tracking-tight">2. Can I find
+                                Veluflex joint gel in local pharmacies?</h4>
+                            <i data-lucide="chevron-down"
+                                class="faq-icon text-brand-accent w-5 h-5 transition-transform duration-300"></i>
+                        </div>
+                        <div class="faq-answer px-8 text-text-muted text-[15px] bg-gray-50/50">
+                            <p class="leading-relaxed py-4 text-gray-500 italic">To ensure highest quality direct
+                                distribution and maintain the most competitive pricing by eliminating high pharmacy
+                                markups, Veluflex™ is exclusively available through our official regional logistics
+                                hubs.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="faq-item border border-gray-200 rounded-[2.5rem] bg-gray-50 overflow-hidden cursor-pointer shadow-sm hover:border-brand-accent transition-all duration-300">
+                        <div class="faq-question flex justify-between items-center p-8" onclick="toggleFaq(this)">
+                            <h4 class="font-black text-brand-dark text-lg uppercase tracking-tight">3. What is the best
+                                duration for a complete Veluflex course?</h4>
+                            <i data-lucide="chevron-down"
+                                class="faq-icon text-brand-accent w-5 h-5 transition-transform duration-300"></i>
+                        </div>
+                        <div class="faq-answer px-8 text-text-muted text-[15px] bg-gray-50/50">
+                            <p class="leading-relaxed py-4 text-gray-500 italic">While many users report rapid soothing
+                                within the first few days, we strongly recommend a continuous application period of 30
+                                to 90 days. This allows for total deep tissue rehydration and long-term joint support.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="faq-item border border-gray-200 rounded-[2.5rem] bg-gray-50 overflow-hidden cursor-pointer shadow-sm hover:border-brand-accent transition-all duration-300">
+                        <div class="faq-question flex justify-between items-center p-8" onclick="toggleFaq(this)">
+                            <h4 class="font-black text-brand-dark text-lg uppercase tracking-tight">4. Is the product
+                                safe to use with other medical treatments?</h4>
+                            <i data-lucide="chevron-down"
+                                class="faq-icon text-brand-accent w-5 h-5 transition-transform duration-300"></i>
+                        </div>
+                        <div class="faq-answer px-8 text-text-muted text-[15px] bg-gray-50/50">
+                            <p class="leading-relaxed py-4 text-gray-500 italic">Veluflex™ is a non-invasive external
+                                topical solution. However, as with any health-related product, we recommend consulting
+                                your physician if you have serious pre-existing conditions or are undergoing specific
+                                chronic treatments.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="faq-item border border-gray-200 rounded-[2.5rem] bg-gray-50 overflow-hidden cursor-pointer shadow-sm hover:border-brand-accent transition-all duration-300">
+                        <div class="faq-question flex justify-between items-center p-8" onclick="toggleFaq(this)">
+                            <h4 class="font-black text-brand-dark text-lg uppercase tracking-tight">5. How does the
+                                90-day money-back guarantee work?</h4>
+                            <i data-lucide="chevron-down"
+                                class="faq-icon text-brand-accent w-5 h-5 transition-transform duration-300"></i>
+                        </div>
+                        <div class="faq-answer px-8 text-text-muted text-[15px] bg-gray-50/50">
+                            <p class="leading-relaxed py-4 text-gray-500 italic">Your satisfaction is our absolute
+                                priority. If you do not experience the mobility improvements you expected, simply
+                                contact our dedicated customer support team within 90 days from the date of purchase to
+                                file for a full refund fulfillment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 9. FOOTER & COMPLIANCE -->
+    <footer class="bg-white text-gray-400 py-32 px-6 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto space-y-24">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-12">
+                <img src="images/veluflex_logo_new.webp" alt="Veluflex Brand Signature"
+                    class="h-8 w-auto opacity-30 grayscale italic" loading="lazy">
+                <nav
+                    class="flex flex-wrap justify-center gap-10 text-[10px] font-black uppercase tracking-[0.2em] text-gray-500">
+                    <a href="javascript:void(0)" onclick="openModal('privacyModal')"
+                        class="hover:text-brand-accent transition">Privacy Protection Policy</a>
+                    <a href="javascript:void(0)" onclick="openModal('termsModal')"
+                        class="hover:text-brand-accent transition">Terms of Global Service</a>
+                </nav>
+            </div>
+
+            <div class="max-w-4xl mx-auto text-center space-y-10">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-brand-bg rounded-lg border border-blue-100 mb-8">
+                    <i data-lucide="info" class="w-4 h-4 text-brand-accent" aria-hidden="true"></i>
+                    <span class="text-[10px] font-black uppercase tracking-widest text-brand-dark">Official European
+                        Operations & Independent Logistics Hub</span>
+                </div>
+
+                <p class="text-[10px] font-bold uppercase tracking-widest leading-relaxed text-gray-600">
+                    COMPLIANCE DISCLOSURE: This digital portal serves as an independent authorized promotional logistics
+                    hub for the Europe region. Secure payment fulfillment is managed through encrypted provider gateway
+                    systems. We are promotional partners and not the direct manufacturer of the physical product.
+                </p>
+
+                <p class="text-[9px] font-medium leading-relaxed italic opacity-50">
+                    IMPORTANT MEDICAL DISCLAIMER: Veluflex™ is classified as a cosmetic joint support formula for
+                    topical daily comfort improvement. This product is not a drug or pharmaceutical medicine. It is not
+                    intended to diagnose, mitigate, treat, or cure clinical diseases or chronic medical conditions.
+                    Results vary based on individual physiological factors.
+                </p>
+
+                <div class="pt-12 flex flex-col items-center gap-8">
+                    <div class="flex gap-10 opacity-20 grayscale items-center" aria-label="Secure Payment Methods">
+                        <i data-lucide="credit-card" class="w-8 h-8"></i>
+                        <i data-lucide="shield-check" class="w-8 h-8"></i>
+                        <i data-lucide="lock" class="w-8 h-8"></i>
+                    </div>
+                    <p class="text-[10px] font-black tracking-widest text-brand-dark uppercase">&copy; 2026 VELUFLEX
+                        EUROPE OFFICIAL • SECURE LOGISTICS NETWORK • ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS (Full Compliance) -->
+    <div id="privacyModal"
+        class="modal fixed inset-0 z-50 bg-brand-dark/95 backdrop-blur-2xl px-6 items-center justify-center"
+        aria-labelledby="privacy-title" role="dialog" aria-modal="true">
+        <div class="bg-white rounded-[3rem] w-full max-w-2xl max-h-[85vh] flex flex-col overflow-hidden shadow-2xl"
+            onclick="event.stopPropagation()">
+            <div class="p-8 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
+                <h3 id="privacy-title" class="font-serif text-2xl text-brand-dark italic tracking-tighter">Global
+                    Privacy Protection Policy</h3>
+                <button onclick="closeModals()" aria-label="Close modal"
+                    class="text-4xl font-light hover:text-brand-accent transition-colors">&times;</button>
+            </div>
+            <div
+                class="p-10 overflow-y-auto text-sm text-gray-500 space-y-8 leading-relaxed custom-scrollbar text-left">
+                <p
+                    class="font-bold text-brand-accent border-l-4 border-brand-accent pl-4 uppercase tracking-widest text-[10px]">
+                    GDPR / EU Data Protection Compliance 2026</p>
+                <p>Your biological and personal privacy is our absolute concern. We use anonymous analytical systems to
+                    optimize site performance. No financial or credit card data is ever stored on local servers; all
+                    payment transactions are routed through 256-bit SSL encrypted provider fulfillment systems.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="termsModal"
+        class="modal fixed inset-0 z-50 bg-brand-dark/95 backdrop-blur-2xl px-6 items-center justify-center"
+        aria-labelledby="terms-title" role="dialog" aria-modal="true">
+        <div class="bg-white rounded-[3rem] w-full max-w-2xl max-h-[85vh] flex flex-col overflow-hidden shadow-2xl"
+            onclick="event.stopPropagation()">
+            <div class="p-8 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
+                <h3 id="terms-title" class="font-serif text-2xl text-brand-dark italic tracking-tighter">Terms &
+                    Conditions of Service</h3>
+                <button onclick="closeModals()" aria-label="Close modal"
+                    class="text-4xl font-light hover:text-brand-accent transition-colors">&times;</button>
+            </div>
+            <div
+                class="p-10 overflow-y-auto text-sm text-gray-500 space-y-8 leading-relaxed custom-scrollbar text-left">
+                <p class="font-bold text-brand-accent uppercase tracking-widest text-[10px]">Authorized European Service
+                    Terms.</p>
+                <p>By using this platform, you acknowledge that you are receiving a promotional offer for joint support
+                    technology. Final commercial contracts are established between the user and the logistics
+                    fulfillment provider. We guarantee information accuracy regarding historical product performance
+                    metrics.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        function toggleFaq(el) {
+            const item = el.parentElement;
+            const isActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+            if (!isActive) item.classList.add('active');
+        }
+        function openModal(id) { document.getElementById(id).style.display = 'flex'; setTimeout(() => document.getElementById(id).classList.add('active'), 10); }
+        function closeModals() { document.querySelectorAll('.modal').forEach(m => { m.classList.remove('active'); setTimeout(() => m.style.display = 'none', 300); }); }
+        window.onclick = function (event) { if (event.target.classList.contains('modal')) closeModals(); }
+    </script>
+</body>
+
+</html>
