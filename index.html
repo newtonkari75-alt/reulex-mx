@@ -26,7 +26,7 @@
     <meta property="og:description" content="Suplemento alimenticio premium con 20 cápsulas. Bienestar diario con la potencia del Colágeno y Vitamina C." />
     <meta property="og:image" content="images/reulex.png" />
 
-    <!-- UI Assets (Solo diseño y funcionalidad visual) -->
+    <!-- UI Assets -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
@@ -55,6 +55,27 @@
         .brand-bg { background-color: #1D3A6D; }
         .brand-text { color: #1D3A6D; }
         .brand-border { border-color: #1D3A6D; }
+
+        /* Estilo do Logo Escrito (Igual à foto) */
+        .logo-written {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1D3A6D;
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+            line-height: 1;
+        }
+        .logo-written::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 2px;
+            background-color: #1D3A6D;
+            opacity: 0.8;
+        }
         
         .policy-table { width: 100%; border-collapse: collapse; font-size: 0.75rem; margin: 1rem 0; }
         .policy-table th, .policy-table td { border: 1px solid #e5e7eb; padding: 8px; text-align: left; }
@@ -65,7 +86,8 @@
 
     <header class="sticky top-0 bg-white/95 backdrop-blur-md z-40 shadow-sm border-b border-gray-100">
         <div class="container mx-auto flex justify-center items-center p-4">
-            <img src="images/image_3494e0.png" alt="Reulex Logo" class="h-10 md:h-12 w-auto object-contain">
+            <!-- Logo Escrito (Recreação fiel à imagem) -->
+            <div class="logo-written">Reulex</div>
         </div>
     </header>
 
@@ -167,37 +189,24 @@
     <footer class="bg-gray-950 text-gray-300 py-12 border-t border-gray-800">
         <div class="container mx-auto px-4 text-center text-sm">
             <div class="flex items-center justify-center gap-2 mb-6">
-                <img src="images/image_3494e0.png" alt="Reulex Footer" class="h-6 w-auto brightness-0 invert opacity-60">
+                <!-- Logo no Footer -->
+                <div class="logo-written !text-white opacity-40 !text-xl">Reulex</div>
             </div>
             <p class="font-bold text-white mb-6">&copy; 2026 Reulex™. Suplementos Alimenticios México.</p>
             
-            <div class="inline-flex items-center gap-2 bg-gray-800/50 px-3 py-1 rounded-full mb-8">
-                <i data-feather="shield" class="w-3 h-3 text-blue-400"></i>
-                <span class="text-xs text-gray-400">Distribuidor Global Autorizado de Reulex™</span>
-            </div>
-            
-            <div class="mb-8 text-gray-500 text-[11px] space-y-4 text-center max-w-xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <p class="text-gray-400 uppercase font-bold text-[9px] mb-1">Responsable del Producto:</p>
-                        <p>Fonslife Trading FZCO | Licencia 39314</p>
-                        <p>Dubai Silicon Oasis, DDP, Edificio A1, Dubái, EAU</p>
-                    </div>
-                    <div>
-                        <p class="text-gray-400 uppercase font-bold text-[9px] mb-1">Correspondencia México/USA:</p>
-                        <p>3979 Albany Post Road ste 2, Unit #2277, Hyde Park, NY 12538, EE. UU.</p>
-                    </div>
-                </div>
-                <div>
-                    <p>Soporte al Cliente: soporte@reulex.mx | +1 (888) 828-8952</p>
-                </div>
-            </div>
-            
             <div class="flex justify-center flex-wrap gap-4 md:gap-8 mb-8 text-xs font-medium uppercase tracking-wide">
+                <button onclick="openModal('about')" class="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5">Sobre el Producto</button>
                 <button onclick="openModal('terms')" class="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5">Términos de Venta</button>
-                <button onclick="openModal('privacy')" class="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5">Aviso de Privacidad</button>
                 <button onclick="openModal('shipping')" class="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5">Política de Envío</button>
                 <button onclick="openModal('returns')" class="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5">Política de Devolución</button>
+                <button onclick="openModal('privacy')" class="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5">Aviso de Privacidad</button>
+            </div>
+
+            <div class="mb-8 text-gray-500 text-[11px] space-y-4 text-center max-w-xl mx-auto">
+                <div>
+                    <p class="text-gray-400 uppercase font-bold text-[9px] mb-1">Soporte y Contacto:</p>
+                    <p>soporte@reulex.mx | +1 (888) 828-8952</p>
+                </div>
             </div>
 
             <div class="border-t border-gray-800 pt-8 mt-4 text-[10px] text-gray-500 max-w-3xl mx-auto space-y-2 leading-relaxed opacity-40">
@@ -214,7 +223,7 @@
             <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                 <div class="relative transform overflow-hidden rounded-3xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-3xl max-h-[85vh] flex flex-col border border-gray-100">
                     <div class="bg-white px-6 py-5 border-b border-gray-100 flex justify-between items-center sticky top-0 z-20">
-                        <h3 class="text-base font-bold text-gray-900 uppercase tracking-widest" id="modal-title">Legales Reulex™</h3>
+                        <h3 class="text-base font-bold text-gray-900 uppercase tracking-widest" id="modal-title">Información Reulex™</h3>
                         <button type="button" onclick="closeModal()" class="rounded-full p-2 bg-gray-100 text-gray-500 hover:text-gray-800 transition-colors">
                             <i data-feather="x" class="h-5 w-5"></i>
                         </button>
@@ -247,82 +256,88 @@
         window.addEventListener("load", reveal);
         reveal();
 
-        // Modals Content
+        // Modals Content (Actualizado con tu información específica)
         const modal = document.getElementById('policy-modal');
         const modalTitle = document.getElementById('modal-title');
         const modalContent = document.getElementById('modal-content-area');
 
         const modalData = {
-            terms: {
-                title: "TÉRMINOS DE VENTA Y SERVICIO",
+            about: {
+                title: "SOBRE NUESTRO PRODUCTO",
                 content: `
                     <div class="space-y-4">
-                        <p class="font-bold">CONTRATO DE COMPRA-VENTA PARA REULEX™</p>
-                        <p>Al acceder a este sitio web y/o realizar un pedido, usted acepta quedar vinculado por los siguientes Términos y Condiciones. Estos términos rigen la relación comercial entre Fonslife Trading FZCO y el usuario final.</p>
-                        <h4>1. ELEGIBILIDAD</h4>
-                        <p>Para realizar compras, el usuario debe tener al menos 18 años de edad y poseer capacidad legal para contratar. El uso del producto está destinado únicamente para consumo personal; queda estrictamente prohibida su reventa.</p>
-                        <h4>2. PROPIEDAD INTELECTUAL</h4>
-                        <p>Todo el contenido de este sitio (textos, imágenes, logotipos y diseño) es propiedad exclusiva de Reulex™ y sus proveedores. Su reproducción o uso sin autorización previa está penado por la ley.</p>
-                        <h4>3. LIMITACIÓN DE RESPONSABILIDAD</h4>
-                        <p>Fonslife Trading FZCO no se hace responsable por reacciones individuales derivadas del uso del suplemento alimenticio. El usuario reconoce que este producto no es un medicamento y no sustituye el tratamiento médico profesional.</p>
-                        <h4>4. JURISDICCIÓN</h4>
-                        <p>Cualquier disputa legal se resolverá bajo las leyes vigentes aplicables en el domicilio fiscal de la compañía, salvo que la legislación local vigente exija lo contrario.</p>
+                        <p class="font-bold">Reulex™ – Suplemento Alimenticio para el Cuidado de las Articulaciones</p>
+                        <p>Reulex™ es un suplemento alimenticio formulado con colágeno hidrolizado, MSM (metilsulfonilmetano), vitamina C, vitamina D y calcio coralino, diseñado para apoyar la salud de las articulaciones, los huesos y los tejidos conectivos.</p>
+                        <p>Con el paso del tiempo, el cuerpo reduce su producción natural de colágeno, lo que puede afectar la movilidad y la comodidad al realizar actividades diarias. Reulex™ aporta nutrientes clave que contribuyen al mantenimiento normal del tejido cartilaginoso y al funcionamiento adecuado del sistema musculoesquelético.</p>
+                        <h4>Nuestra fórmula combina:</h4>
+                        <ul>
+                            <li><strong>Colágeno hidrolizado:</strong> contribuye a la estructura de cartílagos, ligamentos y tendones.</li>
+                            <li><strong>MSM:</strong> utilizado como apoyo nutricional para la flexibilidad articular.</li>
+                            <li><strong>Vitamina C:</strong> necesaria para la síntesis normal de colágeno.</li>
+                            <li><strong>Vitamina D y calcio:</strong> contribuyen al mantenimiento de huesos en condiciones normales.</li>
+                        </ul>
+                        <p class="text-xs italic">Reulex™ no es un medicamento. Es un suplemento alimenticio destinado a complementar la dieta.</p>
                     </div>
                 `
             },
-            privacy: {
-                title: "AVISO DE PRIVACIDAD INTEGRAL",
+            terms: {
+                title: "TÉRMINOS DE VENTA",
                 content: `
                     <div class="space-y-4">
-                        <p>En Reulex™, la seguridad de sus datos es nuestra prioridad. Cumplimos con las normativas internacionales de protección de datos personales.</p>
-                        <h4>1. DATOS RECOLECTADOS</h4>
-                        <p>Recopilamos información necesaria para la transacción: nombre completo, dirección de envío, número telefónico y dirección de correo electrónico.</p>
-                        <h4>2. USO DE LA INFORMACIÓN</h4>
-                        <table class="policy-table">
-                            <thead><tr><th>Finalidad</th><th>Datos</th><th>Fundamento</th></tr></thead>
-                            <tbody>
-                                <tr><td>Envío Logístico</td><td>Dirección y teléfono</td><td>Ejecución de contrato</td></tr>
-                                <tr><td>Pagos Seguros</td><td>Datos bancarios (encriptados)</td><td>Cumplimiento financiero</td></tr>
-                                <tr><td>Soporte Post-venta</td><td>Email y Nombre</td><td>Interés legítimo</td></tr>
-                            </tbody>
-                        </table>
-                        <h4>3. SEGURIDAD</h4>
-                        <p>Utilizamos protocolos SSL para garantizar que su información viaje de forma segura. No almacenamos datos sensibles de tarjetas de crédito en nuestros servidores internos.</p>
-                        <h4>4. DERECHOS ARCO</h4>
-                        <p>Usted puede solicitar el Acceso, Rectificación, Cancelación u Oposición al uso de sus datos enviando un correo a soporte@reulex.mx.</p>
+                        <h4>1. Información General</h4>
+                        <p>Al realizar un pedido en este sitio web, el cliente acepta los presentes Términos de Venta.</p>
+                        <h4>2. Producto</h4>
+                        <p>Reulex™ es un suplemento alimenticio. No sustituye tratamiento médico ni está destinado a diagnosticar, tratar o curar enfermedades.</p>
+                        <h4>3. Pedido y Confirmación</h4>
+                        <p>Los pedidos realizados a través del formulario o por teléfono están sujetos a confirmación por parte de nuestro equipo de atención al cliente.</p>
+                        <h4>4. Precio y Pago</h4>
+                        <p>El precio final será confirmado antes del envío. El pago se realiza conforme al método seleccionado al momento del pedido.</p>
+                        <h4>5. Envío</h4>
+                        <p>Los tiempos de entrega pueden variar según la ubicación del cliente. El cliente recibirá información de seguimiento cuando esté disponible.</p>
+                        <h4>6. Uso del Producto</h4>
+                        <p>El cliente es responsable de utilizar el producto conforme a las instrucciones indicadas en el envase.</p>
                     </div>
                 `
             },
             shipping: {
-                title: "POLÍTICA DE ENVÍO Y ENTREGA",
+                title: "POLÍTICA DE ENVÍO",
                 content: `
                     <div class="space-y-4">
-                        <h4>1. COBERTURA</h4>
-                        <p>Realizamos envíos a toda la República Mexicana a través de paqueterías de prestigio (DHL, FedEx, Estafeta). Actualmente ofrecemos ENVÍO GRATIS en pedidos seleccionados de Reulex™.</p>
-                        <h4>2. PLAZOS DE ENTREGA</h4>
+                        <p>Los pedidos se procesan una vez confirmados por nuestro equipo.</p>
                         <ul>
-                            <li><strong>Procesamiento:</strong> 24-48 horas hábiles después de confirmado el pago.</li>
-                            <li><strong>Entrega Nacional:</strong> 3 a 7 días hábiles, dependiendo de la ubicación (zonas extendidas pueden demorar hasta 10 días).</li>
+                            <li>El tiempo estimado de entrega puede variar dependiendo de la región dentro de México.</li>
+                            <li>En caso de retrasos logísticos, el cliente será notificado a la brevedad.</li>
+                            <li>Es responsabilidad del cliente proporcionar datos correctos de contacto y dirección para evitar errores en la entrega.</li>
                         </ul>
-                        <h4>3. SEGUIMIENTO</h4>
-                        <p>Una vez que el pedido sea despachado, recibirá un número de guía para rastrear su paquete en tiempo real a través del portal de la transportadora.</p>
-                        <h4>4. INCIDENCIAS</h4>
-                        <p>En caso de paquetes dañados o extraviados, Reulex™ gestionará la reposición sin costo adicional para el cliente, siempre que se reporte dentro de las primeras 48 horas de la entrega.</p>
                     </div>
                 `
             },
             returns: {
-                title: "POLÍTICA DE DEVOLUCIÓN Y REEMBOLSO",
+                title: "POLÍTICA DE DEVOLUCIÓN",
                 content: `
                     <div class="space-y-4">
-                        <h4>1. GARANTÍA DE SATISFACCIÓN</h4>
-                        <p>Ofrecemos una garantía de satisfacción de 30 días. Si el producto no cumple con sus expectativas, puede solicitar un reembolso parcial o total bajo las siguientes condiciones.</p>
-                        <h4>2. CONDICIONES DE DEVOLUCIÓN</h4>
-                        <p>Para ser elegible para una devolución, el frasco debe estar sellado y en su empaque original, a menos que se trate de un defecto de fabricación.</p>
-                        <h4>3. PROCESO DE REEMBOLSO</h4>
-                        <p>Una vez recibido e inspeccionado el producto devuelto, le notificaremos la aprobación de su reembolso. El dinero se devolverá al método de pago original en un plazo de 5 a 10 días hábiles.</p>
-                        <h4>4. GASTOS DE ENVÍO</h4>
-                        <p>Los gastos de envío para devoluciones voluntarias corren por cuenta del cliente, a menos que el producto enviado haya sido incorrecto o defectuoso.</p>
+                        <p>El cliente puede solicitar información sobre devoluciones contactando al servicio de atención al cliente.</p>
+                        <ul>
+                            <li>El producto debe estar en su empaque original y sellado para ser elegible.</li>
+                            <li>Las condiciones específicas de devolución serán confirmadas por el equipo de soporte caso por caso.</li>
+                            <li>Los costos de envío por devolución pueden aplicar según el motivo del retorno.</li>
+                        </ul>
+                    </div>
+                `
+            },
+            privacy: {
+                title: "AVISO DE PRIVACIDAD",
+                content: `
+                    <div class="space-y-4">
+                        <p>Reulex™ respeta la privacidad de sus clientes. Los datos personales proporcionados (nombre, teléfono, dirección) serán utilizados exclusivamente para:</p>
+                        <ul>
+                            <li>Procesar pedidos.</li>
+                            <li>Confirmar información de envío.</li>
+                            <li>Proporcionar soporte al cliente.</li>
+                        </ul>
+                        <p>No compartimos información personal con terceros no autorizados. El cliente puede solicitar la modificación o eliminación de sus datos contactando al servicio de atención.</p>
+                        <h4>Contacto de Soporte:</h4>
+                        <p>soporte@reulex.mx | +1 (888) 828-8952</p>
                     </div>
                 `
             }
