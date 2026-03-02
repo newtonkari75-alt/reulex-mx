@@ -56,7 +56,7 @@
         .brand-text { color: #1D3A6D; }
         .brand-border { border-color: #1D3A6D; }
 
-        /* Estilo do Logo Escrito (Igual à foto) */
+        /* Estilo do Logo Escrito */
         .logo-written {
             font-size: 2.2rem;
             font-weight: 800;
@@ -86,7 +86,6 @@
 
     <header class="sticky top-0 bg-white/95 backdrop-blur-md z-40 shadow-sm border-b border-gray-100">
         <div class="container mx-auto flex justify-center items-center p-4">
-            <!-- Logo Escrito (Recreação fiel à imagem) -->
             <div class="logo-written">Reulex</div>
         </div>
     </header>
@@ -102,16 +101,7 @@
                         
                         <!-- Rating & Promo Badge -->
                         <div class="glass-panel rounded-full px-5 py-2 mb-6 inline-flex items-center gap-3 shadow-sm mx-auto md:mx-0">
-                            <div class="flex items-center gap-1">
-                                <span class="font-bold text-sm">4.9/5</span>
-                                <div class="flex items-center">
-                                    <i class="star-filled w-4 h-4" data-feather="star"></i>
-                                    <i class="star-filled w-4 h-4" data-feather="star"></i>
-                                    <i class="star-filled w-4 h-4" data-feather="star"></i>
-                                    <i class="star-filled w-4 h-4" data-feather="star"></i>
-                                    <i class="star-filled w-4 h-4" data-feather="star"></i>
-                                </div>
-                            </div>
+                            <span class="font-bold text-sm text-gray-800">4.9/5 ⭐⭐⭐⭐⭐</span>
                             <div class="w-px h-4 bg-gray-400 opacity-50"></div>
                             <span class="text-xs font-bold uppercase tracking-wide text-gray-700">OFERTA MÉXICO: 50% DE DESCUENTO</span>
                         </div>
@@ -123,27 +113,27 @@
                         
                         <!-- SUBHEAD -->
                         <p class="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed max-w-lg font-medium">
-                            Recupera tu vitalidad con nuestro suplemento alimenticio premium. Diseñado para quienes buscan apoyo integral para su cuerpo y bienestar diario.
+                            Recupera tu vitalidad con nuestro suplemento alimenticio premium. Diseñado para quienes buscan apoyo integral para sus articulaciones, movilidad y bienestar diario.
                         </p>
                         
                         <!-- CHECKLIST -->
                         <div class="w-full max-w-md glass-panel rounded-2xl p-6 mb-8 text-left shadow-sm">
                             <ul class="space-y-4">
                                 <li class="flex items-start">
-                                    <div class="brand-bg rounded-full p-1 mr-3 mt-0.5 flex-shrink-0">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-white"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    <div class="text-green-600 mr-3 flex-shrink-0">
+                                        <i data-feather="check-circle" class="w-5 h-5"></i>
                                     </div>
                                     <span class="text-gray-800 font-medium text-sm sm:text-base">Fórmula avanzada con Colágeno de alta calidad</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <div class="brand-bg rounded-full p-1 mr-3 mt-0.5 flex-shrink-0">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-white"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    <div class="text-green-600 mr-3 flex-shrink-0">
+                                        <i data-feather="check-circle" class="w-5 h-5"></i>
                                     </div>
                                     <span class="text-gray-800 font-medium text-sm sm:text-base">Enriquecido con Vitamina C para absorción óptima</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <div class="brand-bg rounded-full p-1 mr-3 mt-0.5 flex-shrink-0">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-white"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    <div class="text-green-600 mr-3 flex-shrink-0">
+                                        <i data-feather="check-circle" class="w-5 h-5"></i>
                                     </div>
                                     <span class="text-gray-800 font-medium text-sm sm:text-base">Frasco con 20 cápsulas de fácil consumo</span>
                                 </li>
@@ -162,7 +152,7 @@
                             </div>
                         </div>
 
-                        <p class="text-center font-bold text-gray-800 uppercase tracking-widest text-sm mb-2">Selecciona tu ubicación:</p>
+                        <p class="text-center font-bold text-gray-800 uppercase tracking-widest text-sm mb-2">SELECCIONA TU UBICACIÓN:</p>
                         
                         <!-- Selectores de País -->
                         <div class="flex flex-col gap-3 w-full">
@@ -189,7 +179,6 @@
     <footer class="bg-gray-950 text-gray-300 py-12 border-t border-gray-800">
         <div class="container mx-auto px-4 text-center text-sm">
             <div class="flex items-center justify-center gap-2 mb-6">
-                <!-- Logo no Footer -->
                 <div class="logo-written !text-white opacity-40 !text-xl">Reulex</div>
             </div>
             <p class="font-bold text-white mb-6">&copy; 2026 Reulex™. Suplementos Alimenticios México.</p>
@@ -256,7 +245,7 @@
         window.addEventListener("load", reveal);
         reveal();
 
-        // Modals Content (Actualizado con tu información específica)
+        // Modals Content
         const modal = document.getElementById('policy-modal');
         const modalTitle = document.getElementById('modal-title');
         const modalContent = document.getElementById('modal-content-area');
@@ -285,7 +274,7 @@
                 content: `
                     <div class="space-y-4">
                         <h4>1. Información General</h4>
-                        <p>Al realizar un pedido en este sitio web, el cliente acepta los presentes Términos de Venta.</p>
+                        <p>Al realizar un pedido en este sitio web, el cliente acepta los presentes Términos de Venta. Este sitio NO es parte de Google™ ni de Meta Inc. Además, este sitio NO está respaldado por Google™ ni por Meta Inc. de ninguna manera.</p>
                         <h4>2. Producto</h4>
                         <p>Reulex™ es un suplemento alimenticio. No sustituye tratamiento médico ni está destinado a diagnosticar, tratar o curar enfermedades.</p>
                         <h4>3. Pedido y Confirmación</h4>
@@ -329,15 +318,16 @@
                 title: "AVISO DE PRIVACIDAD",
                 content: `
                     <div class="space-y-4">
-                        <p>Reulex™ respeta la privacidad de sus clientes. Los datos personales proporcionados (nombre, teléfono, dirección) serán utilizados exclusivamente para:</p>
+                        <p>Reulex™ respeta la privacidad de sus clientes. Los datos personales proporcionados serán utilizados para procesar pedidos, confirmar envíos y dar soporte.</p>
+                        <h4>Uso de Cookies y Tecnologías de Rastreo (Google Ads)</h4>
+                        <p>Este sitio utiliza cookies y tecnologías similares, incluyendo etiquetas de Google Ads y píxeles, para recopilar información sobre el uso del sitio y para mostrar publicidad relevante a los usuarios basada en sus intereses y comportamiento de navegación.</p>
+                        <p>Usted puede administrar sus preferencias de publicidad o inhabilitar la personalización de anuncios a través de la configuración de anuncios de Google o mediante herramientas de terceros.</p>
+                        <h4>Sus Datos Personales</h4>
                         <ul>
-                            <li>Procesar pedidos.</li>
-                            <li>Confirmar información de envío.</li>
-                            <li>Proporcionar soporte al cliente.</li>
+                            <li>No compartimos información personal con terceros no autorizados con fines de lucro.</li>
+                            <li>El cliente puede solicitar la modificación o eliminación de sus datos contactando a soporte@reulex.mx.</li>
                         </ul>
-                        <p>No compartimos información personal con terceros no autorizados. El cliente puede solicitar la modificación o eliminación de sus datos contactando al servicio de atención.</p>
-                        <h4>Contacto de Soporte:</h4>
-                        <p>soporte@reulex.mx | +1 (888) 828-8952</p>
+                        <p>Soporte: +1 (888) 828-8952</p>
                     </div>
                 `
             }
